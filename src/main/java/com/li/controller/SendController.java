@@ -140,7 +140,7 @@ public class SendController {
 //                // 附件部分 未测试 感觉好像有问题
 //                messageBodyPart = new MimeBodyPart();
 //                //设置要发送附件的文件路径
-//                String filename = "C:\\Users\\HIAPAD\\Desktop\\李秋亮的简历.doc";
+//                String filename = "C:\\Users\\HIAPAD\\Desktop\\xxx.doc";
 //                FileDataSource source = new FileDataSource(filename);
 //                messageBodyPart.setDataHandler(new DataHandler(source));
 //                //处理附件名称中文（附带文件路径）乱码问题
@@ -151,7 +151,7 @@ public class SendController {
 //               message.setContent(multipart);
 
                 //可实现的附件部分
-                String path = "C:\\Users\\HIAPAD\\Desktop\\李秋亮的简历.doc";
+                String path = "C:\\Users\\HIAPAD\\Desktop\\xxxx.doc";
                 MimeBodyPart bodyPart = new MimeBodyPart();
                 DataSource dh = new FileDataSource(path);
                 bodyPart.setDataHandler(new DataHandler(dh));
@@ -176,7 +176,7 @@ public class SendController {
     @RequestMapping("/test/2")
     public String test() throws Exception {
         ArrayList<String> filepath = new ArrayList<>();
-        filepath.add("C:\\Users\\HIAPAD\\Desktop\\李秋亮的简历.doc");
+        filepath.add("C:\\Users\\HIAPAD\\Desktop\\xxxx.doc");
         sendEmail("13225542821@163.com",null,"主体是啥","邮件正文+\n <p style=\"background-color:yellow; height:50px;width:200px\" >this is html</p>",filepath);
         return "成功";
     }
@@ -186,7 +186,7 @@ public class SendController {
     // PS: 某些邮箱服务器为了增加邮箱本身密码的安全性，给 SMTP 客户端设置了独立密码（有的邮箱称为“授权码”）,
     //     对于开启了独立密码的邮箱, 这里的邮箱密码必需使用这个独立密码（授权码）。
     public static String myEmailAccount = "574550413@qq.com";
-    public static String myEmailPassword = "1位授权码";
+    public static String myEmailPassword = "ffzuvbzjqgvjbege";
     // 发件人邮箱的 SMTP 服务器地址, 必须准确, 不同邮件服务器地址不同, 一般(只是一般, 绝非绝对)格式为: smtp.xxx.com
     // 网易163邮箱的 SMTP 服务器地址为: smtp.163.com
     public static String myEmailSMTPHost = "smtp.qq.com";
